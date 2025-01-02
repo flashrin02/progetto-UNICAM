@@ -7,15 +7,23 @@ public class PauseMenu : MonoBehaviour
      public GameObject optionmenu; // Assegna il Canvas del menu di pausa
 
     private bool isPaused = false;
-
+    private bool OptionsShowing = false;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) // Controlla se ESC è stato premuto
         {
-            if (isPaused)
-                ResumeGame();
-            else
+            if (isPaused){
+
+                if(OptionsShowing==true){
+                OptionsHide(); 
+                }
+                else{
+                    ResumeGame();
+                }
+                
+            }else{
                 PauseGame();
+            }
         }
     }
 
@@ -28,7 +36,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        pauseMenu.SetActive(false); // Nascondi il menu
+        pauseMenu.SetActive(false); // Mostra il menu
         Time.timeScale = 1f; // Ripristina il tempo di gioco
         isPaused = false;
     }
@@ -39,10 +47,12 @@ public class PauseMenu : MonoBehaviour
     }
 
      public void OptionsShow(){
+        OptionsShowing=true;
         optionmenu.SetActive(true); // Mostra il menu
     }
 
     public void OptionsHide(){
-        optionmenu.SetActive(false); // Mostra il menu
+        OptionsShowing=false;
+        optionmenu.SetActive(false); // nasconde il menu
     }
 }
