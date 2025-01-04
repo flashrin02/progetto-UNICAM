@@ -13,12 +13,12 @@ public class Movments : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     bool readyToJump;
-
-    [Header("Keybinds")]
-    public KeyCode jumpKey = KeyCode.Space;
+    
 
     [Header("Ground Check")]
     public float playerHeight;
+    public Transform groundCheck;
+    public  float groundDistance = 0.1f;
     public LayerMask whatIsGround;
     bool grounded;
     public Transform orientation;
@@ -39,7 +39,7 @@ public class Movments : MonoBehaviour
     void Update()
     {
         //Controllo se tocca terra
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f /*+ 0.2f*/, whatIsGround);
+        grounded = Physics.CheckSphere(groundCheck.position, groundDistance, whatIsGround); 
 
         MyInput();
         SpeedControl();
@@ -49,6 +49,8 @@ public class Movments : MonoBehaviour
             rb.drag = goundDrag;
         else
             rb.drag = 0;
+
+        
     }
 
     private void FixedUpdate()
@@ -62,7 +64,7 @@ public class Movments : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
 
         //salto
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        if(Input.GetKey(KeyCode.Space) && readyToJump && grounded)
         {
             readyToJump = false;
             Jump();
