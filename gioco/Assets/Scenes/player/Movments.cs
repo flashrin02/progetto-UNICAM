@@ -63,6 +63,13 @@ public class Movments : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
+        moveSpeed = 5;
+
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed = 10;
+        }
+
         //salto
         if(Input.GetKey(KeyCode.Space) && readyToJump && grounded)
         {
