@@ -1,0 +1,10 @@
+newmtl material_0
+d 1
+Kd 1 1 1
+map_Kd ./Maps/Ground3.jpg
+
+newmtl material_1
+d 1
+Kd 0.87058824 0.87058824 0.87058824
+map_Kd ./Maps/Mountainrock3.jpg
+
