@@ -29,6 +29,8 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         pauseMenu.SetActive(true); // Mostra il menu
         Time.timeScale = 0f; // Ferma il tempo di gioco
         isPaused = true;
@@ -36,6 +38,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         pauseMenu.SetActive(false); // Mostra il menu
         Time.timeScale = 1f; // Ripristina il tempo di gioco
         isPaused = false;
@@ -43,15 +47,21 @@ public class PauseMenu : MonoBehaviour
 
     public void Home()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadSceneAsync(0);
     }
 
-     public void OptionsShow(){
+     public void OptionsShow()
+     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         OptionsShowing=true;
         optionmenu.SetActive(true); // Mostra il menu
     }
 
-    public void OptionsHide(){
+    public void OptionsHide()
+    {
         OptionsShowing=false;
         optionmenu.SetActive(false); // nasconde il menu
     }
