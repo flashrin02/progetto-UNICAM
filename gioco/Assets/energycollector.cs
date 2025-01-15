@@ -21,7 +21,7 @@ public class EnergyCollector : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && nearWall && energyParticle >= 1)
         {
             Destroy(wall); // Distrugge il muro
-            energyParticle -= 100; // Riduci l'energia di 100
+            energyParticle = 0; // Riduci l'energia di 100
             UpdateEnergyText(); // Aggiorna il testo della UI
             actionText.gameObject.SetActive(false); // Nascondi il testo dopo la distruzione del muro
         }

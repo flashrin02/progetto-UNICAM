@@ -4404,11 +4404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &156673523
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5577,11 +5572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &227285629
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7179,11 +7169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &314699843
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7884,11 +7869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &365378623
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9630,11 +9610,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &475627383
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10459,11 +10434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &523821603
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11160,43 +11130,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 498.85022
+      value: 494.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 39.70025
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 454.2116
+      value: 453
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.2032658
+      value: -0.16172978
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.63955355
+      value: 0.65289176
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.69491357
+      value: -0.706339
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.25835928
+      value: 0.2205926
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 5.686
+      value: 5.765
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -218.025
+      value: -211.275
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -87.21
+      value: -87.111
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       propertyPath: m_Name
@@ -11213,6 +11183,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1630017508}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1630017512}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 20b3dbb856789bd499448184a00beef0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1630017509}
@@ -11606,11 +11579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &606910651
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11711,11 +11679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &612252813
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12196,11 +12159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &669177539
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13036,11 +12994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &729807356
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15713,11 +15666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &880003803
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18259,11 +18207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1021980150
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18867,11 +18810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1047662599
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19343,11 +19281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1062282767
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20409,7 +20342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 524.7
+      value: 524
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20417,35 +20350,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 466.59998
+      value: 466
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8551731
+      value: 0.87048644
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.00311501
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5183425
+      value: 0.49216822
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0037398317
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.522
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 62.442
+      value: 58.966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 0.197
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 7744c51ede6799f43b3278f692742331, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -21554,11 +21487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1214230240
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21659,11 +21587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1219787555
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23430,11 +23353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1336956514
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23773,11 +23691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1346787288
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24032,11 +23945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1364718919
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24341,11 +24249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1381138599
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25495,11 +25398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1445544392
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28290,11 +28188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1596431600
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29112,8 +29005,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3559362, y: 4.12521, z: 1.3559355}
-  m_Center: {x: 0.00000023942013, y: 2.062594, z: -0.0000010824336}
+  m_Size: {x: 1.3559362, y: 0.7917855, z: 1.3559355}
+  m_Center: {x: 0.0000002382955, y: 0.39587831, z: -0.0000017317575}
 --- !u!54 &1630017509
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29137,10 +29030,31 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1630017512
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630017504}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3559363, y: 0.79172665, z: 1.3559364}
+  m_Center: {x: 0.00000023911386, y: 0.395846, z: 0.0000019055411}
 --- !u!1001 &1632968156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32703,11 +32617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1877721518
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33404,11 +33313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &1930817923
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35519,11 +35423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1bc949ada500e40a47e0e6f07b2d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncludeFaces: 15
-  IncludeFoam: 15
-  TileSize: 0.5
-  ShowDebug: 1
-  RealtimeUpdates: 0
 --- !u!33 &2007034208
 MeshFilter:
   m_ObjectHideFlags: 0

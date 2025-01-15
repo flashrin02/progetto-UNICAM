@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class mainmenu : MonoBehaviour
 {
-    private bool OptionsShowing = false;
+    private bool OptionsShowing = false; 
+    public GameObject optionmenu; // Assegna il Canvas del menu di pausa
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) // Controlla se ESC è stato premuto
@@ -13,7 +14,7 @@ public class mainmenu : MonoBehaviour
             }
         }
     }
-    public GameObject optionmenu; // Assegna il Canvas del menu di pausa
+  
     public void PlayGame(){
         SceneManager.LoadSceneAsync(1);
     }
@@ -28,7 +29,7 @@ public class mainmenu : MonoBehaviour
     }
 
     public void OptionsHide(){
-        optionmenu.SetActive(false); // Mostra il menu
+        optionmenu.SetActive(false); // nasconde il menu
         OptionsShowing=false;
     }
 

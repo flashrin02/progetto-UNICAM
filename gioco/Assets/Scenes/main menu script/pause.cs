@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu; // Assegna il Canvas del menu di pausa
-     public GameObject optionmenu; // Assegna il Canvas del menu di pausa
+    public GameObject optionmenu; // Assegna il Canvas del menu options
 
     private bool isPaused = false;
     private bool OptionsShowing = false;
