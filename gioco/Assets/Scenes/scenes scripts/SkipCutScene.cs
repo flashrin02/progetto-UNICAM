@@ -16,7 +16,7 @@ public class SkipCutScene : MonoBehaviour
 
         if (!string.IsNullOrEmpty(nextSceneName))
         {
-            SceneManager.LoadScene(nextSceneName); // Carica la scena successiva
+             SceneManager.LoadSceneAsync(2);
         }
     }
 }
