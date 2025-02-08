@@ -1,17 +1,3 @@
-newmtl Solid
-Ka  1.0 1.0 1.0
-Kd  1.0 1.0 1.0
-Ks  0.0 0.0 0.0
-d  1.0
-Ns  0.0
-illum 0
-
-newmtl model
-Ka  1.0 1.0 1.0
-Kd  1.0 1.0 1.0
-Ks  0.0 0.0 0.0
-d  1.0
-Ns  0.0
-illum 0
-map_Kd model.jpg
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:200d088f2d1380a1e4f2a175e7d0e9fc40f3d29c050239b3248cd849d9eaef8f
+size 187

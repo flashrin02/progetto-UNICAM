@@ -1,5 +1,3 @@
-newmtl material_0
-d 1
-Kd 1 1 1
-map_Kd ./Maps/textured-tree-bark-free17.jpg
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:cdedbd5420480e001547c28ad6e63bf41ef55cf7d18c37a088ee27c980bf9f28
+size 76
