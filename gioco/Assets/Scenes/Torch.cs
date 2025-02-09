@@ -1,25 +1,19 @@
 using UnityEngine;
 
-public class Torch : MonoBehaviour
+public class Tourch : MonoBehaviour
 {
-    public bool isLit = false;  
-    public GameObject flame;   
+    public GameObject fire;
 
-    public void LightTorch()
-    {
-        if (!isLit)
-        {
-            isLit = true;
-            flame.SetActive(true); 
-        }
+    void Start(){
+        fire.SetActive(false);
     }
 
-    public void ExtinguishTorch()
+    void OnTriggerEnter(Collider other)
     {
-        if (isLit)
-        {
-            isLit = false;
-            flame.SetActive(false);  
+        //Controlla se il player è entrato nell'area della torcia
+        if(other.CompareTag("Player")){
+            fire.SetActive(true);   //Accende il fuoco
         }
+        Debug.Log("Il player è entrato nella torcia!");
     }
 }
