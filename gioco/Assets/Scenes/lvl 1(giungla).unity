@@ -2179,10 +2179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7bf53054afdb14c92c2f20f3476d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orientation: {fileID: 0}
-  player: {fileID: 0}
-  playerModel: {fileID: 0}
-  rb: {fileID: 0}
+  orientation: {fileID: 646515599}
+  player: {fileID: 2143851032}
+  playerModel: {fileID: 620485702}
+  rb: {fileID: 2143851031}
   rotationSpeed: 10
 --- !u!114 &1446866458
 MonoBehaviour:
@@ -2862,7 +2862,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143851028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed74647a2314d2b498717b9d5c3a8935, type: 3}
   m_Name: 
