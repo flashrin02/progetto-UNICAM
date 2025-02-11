@@ -8,6 +8,7 @@ public class UnderwaterDepth : MonoBehaviour
     [Header("Depth Parameters")]
     [SerializeField] private Transform mainCamera;
     [SerializeField] private float depth = 0;
+    [SerializeField] private float endwater = 0;
 
     [Header("Post Processing Volume")]
     [SerializeField] private Volume postProcessingVolume;
@@ -18,7 +19,7 @@ public class UnderwaterDepth : MonoBehaviour
 
     private void Update()
     {
-        if (mainCamera.position.y < depth)
+        if (mainCamera.position.y < depth && mainCamera.position.y>endwater)
         {
             EnableEffects(true);
         }
