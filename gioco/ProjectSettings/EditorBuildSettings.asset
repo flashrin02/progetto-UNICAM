@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/main menu.unity
+    path: Assets/RisorseGioco/scene/main menu.unity
     guid: 5d8ff80a4236d46468e4ef262c43cd3b
   - enabled: 1
-    path: Assets/Scenes/introduction.unity
+    path: Assets/RisorseGioco/scene/introduction.unity
     guid: 0628fb8c88e7e8d4d834fa1a4e557715
   - enabled: 1
-    path: Assets/Scenes/spawn.unity
+    path: Assets/RisorseGioco/scene/spawn.unity
     guid: 7664bbe893960bb4ca12ac5fd1f9b1ec
   - enabled: 1
-    path: Assets/Scenes/lvl 1(giungla).unity
+    path: Assets/RisorseGioco/scene/lvl 1(giungla).unity
     guid: 477e972c77cba6c428d3cc338643bc53
   - enabled: 1
-    path: Assets/Scenes/lvl 2(vulcano).unity
+    path: Assets/RisorseGioco/scene/lvl 2(vulcano).unity
     guid: 8d1427000456cb746a8693cfa546b898
   - enabled: 1
-    path: Assets/Scenes/lvl 3(alaska).unity
+    path: Assets/RisorseGioco/scene/lvl 3(alaska).unity
     guid: c4d22f39e9b842f4c86590d264a83bb1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
