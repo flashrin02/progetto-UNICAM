@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/RisorseGioco/scene/lvl 3(alaska).unity
     guid: c4d22f39e9b842f4c86590d264a83bb1
+  - enabled: 1
+    path: Assets/RisorseGioco/scene/Spacetravel.unity
+    guid: d45c05bd54fe1b040bcb3d6f361da142
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

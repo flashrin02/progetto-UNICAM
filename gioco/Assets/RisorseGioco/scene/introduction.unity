@@ -2169,10 +2169,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 44120436643d73148822ef814762fd5d, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 1976299038}
+        m_TargetAssemblyTypeName: TimelineSkipper, Assembly-CSharp
+        m_MethodName: SkipTimelineAndLoadNextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2293,7 +2293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeline: {fileID: 150501999}
-  nextSceneName: spawn
+  nextSceneName: Spacetravel
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
