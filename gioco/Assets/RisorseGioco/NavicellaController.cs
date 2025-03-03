@@ -23,10 +23,28 @@ public class NavicellaController : MonoBehaviour
     private float velocitaX;
     private bool inTurbo = false;
 
+    // Riferimento alla Camera per modificare il FOV
+    public Camera mainCamera;
+    public float fovBoost = 80f;  // FOV durante il boost
+    public float fovSpeed = 5f;   // Velocità di cambio del FOV
+
+    private float originalFov;  // FOV originale
+
     void Start()
     {
         velocitaAttuale = velocitaBase;
         targetX = transform.position.x;
+
+        // Assicurati di avere un riferimento alla Camera
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+        }
+
+        if (mainCamera != null)
+        {
+            originalFov = mainCamera.fieldOfView;  // Salva il FOV originale
+        }
     }
 
     void Update()
@@ -81,8 +99,14 @@ public class NavicellaController : MonoBehaviour
             velocitaAttuale = velocitaBase;
         }
 
-
+        // Gestione del FOV: Aumenta gradualmente durante il boost
+        if (inTurbo)
+        {
+            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, fovBoost, Time.deltaTime * fovSpeed);
+        }
+        else
+        {
+            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, originalFov, Time.deltaTime * fovSpeed);
+        }
     }
-
-    
 }

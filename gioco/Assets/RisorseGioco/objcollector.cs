@@ -1,55 +1,68 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;  // Aggiungi per UI4
-using TMPro;
-
-
+using TMPro; // Per UI
 
 public class ObjectCollector : MonoBehaviour
 {
     public float pickupDistance = 3.0f;  // Distanza per raccogliere l'oggetto
     public string message = "Premi F per raccogliere l'oggetto";  // Messaggio UI
-    public TMP_Text messageText;  // Riferimento al componente Text UI
-    private bool canCollect = false;
+    public TMP_Text messageText;  // Riferimento a TextMeshPro
+    public string sceneName = "Spacetravel"; // Nome della scena da caricare
+
     private bool collected = false;
+    private GameObject player;  // Riferimento al giocatore
 
     void Start()
     {
-        // Assicurati che il messaggio sia nascosto all'inizio
+        player = GameObject.FindWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("⚠ Errore: Nessun oggetto con il tag 'Player' trovato!");
+        }
+
         if (messageText != null)
         {
             messageText.text = "";
         }
+        else
+        {
+            Debug.LogError("⚠ Errore: Il riferimento a TMP_Text non è assegnato!");
+        }
     }
 
     void Update()
-{
-    // Controllo della distanza
-    if (!collected && Vector3.Distance(transform.position, Camera.main.transform.position) <= pickupDistance)
     {
-        // Mostra il messaggio
-        DisplayMessage(message);
+        if (player == null) return;  
 
-        // Se il giocatore preme "F", raccogli l'oggetto
-        if (Input.GetKeyDown(KeyCode.F))
+        float distance = Vector3.Distance(transform.position, player.transform.position);
+        Debug.Log("🔍 Distanza giocatore-oggetto: " + distance);
+
+        if (!collected && distance <= pickupDistance)
         {
-            CollectObject();
+            DisplayMessage(message);
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("✅ Tasto F premuto: raccolgo l'oggetto.");
+                CollectObject();
+            }
+        }
+        else
+        {
+            HideMessage();
+        }
+
+        if (collected)
+        {
+            Debug.Log("📦 Oggetto raccolto. Aspettando il tasto E...");
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("✅ Tasto E premuto! Tentativo di caricare la scena...");
+                LoadNewScene();
+            }
         }
     }
-    else
-    {
-        // Se lontano dall'oggetto, nascondi il messaggio
-        HideMessage();
-    }
-
-    // Debug: verifica che il tasto "E" venga rilevato
-    if (collected && Input.GetKeyDown(KeyCode.E))
-    {
-        Debug.Log("Tasto E premuto! Caricamento della scena...");
-        LoadNewScene();
-    }
-}
-
 
     void DisplayMessage(string message)
     {
@@ -70,14 +83,12 @@ public class ObjectCollector : MonoBehaviour
     void CollectObject()
     {
         collected = true;
-        // Nascondi l'oggetto visibile (per esempio, disattivando il GameObject)
-        gameObject.SetActive(false);
-        // Puoi anche aggiungere effetti visivi o sonori qui
+        gameObject.SetActive(false); // Nasconde l'oggetto
     }
 
     void LoadNewScene()
     {
-        // Carica la scena successiva
-        SceneManager.LoadScene(6);  // Sostituisci con il nome della scena
+        Debug.Log("🚀 Caricamento scena: " + sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 }
