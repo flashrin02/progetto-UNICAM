@@ -42,7 +42,7 @@ public class Movments : MonoBehaviour
         MyInput();
         SpeedControl();
 
-        //gestion drag
+        //gestione drag
         if(grounded)
             rb.drag = goundDrag;
         else
