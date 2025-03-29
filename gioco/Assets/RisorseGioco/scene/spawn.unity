@@ -14696,6 +14696,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4d76db6d3174f49bf71f721695bb3f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 763155206}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4d76db6d3174f49bf71f721695bb3f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 763155208}
   m_SourcePrefab: {fileID: 100100000, guid: 0e4d76db6d3174f49bf71f721695bb3f, type: 3}
 --- !u!1 &763155205 stripped
 GameObject:
@@ -14729,6 +14732,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e4d76db6d3174f49bf71f721695bb3f, type: 3}
   m_PrefabInstance: {fileID: 763155204}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &763155208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763155205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d110010749c9db4480ce59e8b940e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupDistance: 3
+  premif: {fileID: 1343607604}
+  sceneName: viaggioterra2
 --- !u!1001 &781031442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30907,7 +30925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853854901}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22975296, y: 0.000000006981984, z: -0.0000000016482229, w: 0.973249}
+  m_LocalRotation: {x: 0.22975293, y: 0.000000014502544, z: -0.0000000034235863, w: 0.973249}
   m_LocalPosition: {x: 692.8, y: -88.35, z: 718.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33996,7 +34014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999972040}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22975293, y: 0.000000006981983, z: -0.0000000016482224, w: 0.973249}
+  m_LocalRotation: {x: 0.2297529, y: 0.000000014502542, z: -0.0000000034235852, w: 0.973249}
   m_LocalPosition: {x: 692.8, y: -88.35, z: 718.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

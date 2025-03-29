@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro; // Per UI
+using TMPro;
 
 public class ObjectCollector : MonoBehaviour
 {
     public float pickupDistance = 3.0f;  // Distanza per raccogliere l'oggetto
-    public string message = "Premi F per raccogliere l'oggetto";  // Messaggio UI
-    public TMP_Text messageText;  // Riferimento a TextMeshPro
-    public string sceneName = "Spacetravel"; // Nome della scena da caricare
+    public GameObject premif;  // Riferimento all'oggetto UI (TextMeshPro nel Canvas)
+    public string sceneName; // Nome della scena da caricare
 
     private bool collected = false;
     private GameObject player;  // Riferimento al giocatore
@@ -20,13 +19,13 @@ public class ObjectCollector : MonoBehaviour
             Debug.LogError("⚠ Errore: Nessun oggetto con il tag 'Player' trovato!");
         }
 
-        if (messageText != null)
+        if (premif != null)
         {
-            messageText.text = "";
+            premif.SetActive(false); // Assicuriamoci che parta nascosto
         }
         else
         {
-            Debug.LogError("⚠ Errore: Il riferimento a TMP_Text non è assegnato!");
+            Debug.LogError("⚠ Errore: Il riferimento a 'premif' non è assegnato!");
         }
     }
 
@@ -38,17 +37,16 @@ public class ObjectCollector : MonoBehaviour
 
         if (!collected && distance <= pickupDistance)
         {
-            DisplayMessage(message);
+            premif.SetActive(true); // Mostra "Premi F"
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Debug.Log("✅ Tasto F premuto: raccolgo l'oggetto.");
                 CollectObject();
             }
         }
         else
         {
-            HideMessage();
+            premif.SetActive(false); // Nasconde "Premi F"
         }
 
         if (collected)
@@ -57,25 +55,10 @@ public class ObjectCollector : MonoBehaviour
         }
     }
 
-    void DisplayMessage(string message)
-    {
-        if (messageText != null)
-        {
-            messageText.text = message;
-        }
-    }
-
-    void HideMessage()
-    {
-        if (messageText != null)
-        {
-            messageText.text = "";
-        }
-    }
-
     void CollectObject()
     {
         collected = true;
+        premif.SetActive(false); // Nasconde il testo dopo la raccolta
         gameObject.SetActive(false); // Nasconde l'oggetto
     }
 
@@ -90,5 +73,4 @@ public class ObjectCollector : MonoBehaviour
             Debug.LogError("⚠ ERRORE: La scena '" + sceneName + "' non esiste nei Build Settings!");
         }
     }
-
 }

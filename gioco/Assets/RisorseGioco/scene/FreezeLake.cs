@@ -1,17 +1,19 @@
 using UnityEngine;
-using TMPro; // Aggiungi questa direttiva per TextMeshPro
+using TMPro; 
 using UnityEngine.SceneManagement;
 
 public class LetterChallenge : MonoBehaviour
 {
-    public TextMeshProUGUI letterText; // TextMeshProUGUI per mostrare la lettera
-    public float timeLimit = 3f; // Limite di tempo per premere la lettera
-    private string targetLetter;
+    public TextMeshProUGUI letterText; // UI per mostrare la lettera
+    public TextMeshProUGUI scoreText;  // UI per il punteggio
+    public Collider targetPlane; // Piano specifico
+    public GameObject GameObject; 
+    public float timeLimit = 3f; // Tempo limite per premere il tasto
+
+    private string targetLetter;  
     private bool isActive = false;
     private float timer;
-
-    // Piano specifico su cui il player deve camminare
-    public Collider targetPlane;
+    private int score = 0; // Punteggio
 
     void Update()
     {
@@ -21,40 +23,49 @@ public class LetterChallenge : MonoBehaviour
 
             if (timer <= 0)
             {
-                // Se il tempo è scaduto, riavvia il livello
+                Debug.Log("Tempo scaduto!");
                 RestartLevel();
             }
-        }
 
-        // Controlla se una lettera è stata premuta
-        if (Input.anyKeyDown && isActive)
-        {
-            if (Input.inputString == targetLetter.ToLower()) // Verifica che la lettera premuta sia corretta
+            // Controlla se il player preme un tasto
+            if (Input.anyKeyDown)
             {
-                DisplayRandomLetter(); // Mostra una nuova lettera
-                timer = timeLimit; // Reset del timer
-            }
-            else
-            {
-                RestartLevel(); // Se la lettera è sbagliata, riavvia il livello
+                if (Input.inputString == targetLetter.ToLower())
+                {
+                    score++;
+                    UpdateScoreText();
+                    DisplayRandomLetter();
+                    timer = timeLimit; // Reset timer
+
+                    // Controlla se il giocatore ha raggiunto 100 punti
+                    if (score >= 100)
+                    {
+                        TriggerFall();
+                    }
+                }
+                else
+                {
+                    Debug.Log("Lettera sbagliata!");
+                    score = 0;
+                    UpdateScoreText();
+                    RestartLevel();
+                }
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other == targetPlane)
+        if (collision.collider == targetPlane)
         {
-            // Attiva il challenge quando il player cammina sul piano specifico
             StartChallenge();
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision collision)
     {
-        if (other == targetPlane)
+        if (collision.collider == targetPlane)
         {
-            // Disattiva il challenge quando il player esce dal piano
             StopChallenge();
         }
     }
@@ -69,25 +80,40 @@ public class LetterChallenge : MonoBehaviour
     private void StopChallenge()
     {
         isActive = false;
-        letterText.text = ""; // Rimuove la lettera dallo schermo
+        letterText.text = "";
     }
 
     private void DisplayRandomLetter()
     {
-        // Scegli una lettera casuale
         char randomLetter = (char)Random.Range('A', 'Z' + 1);
         targetLetter = randomLetter.ToString();
-
-        // Mostra la lettera sullo schermo
         letterText.text = targetLetter;
-
-        // Imposta il timer per il limite di tempo
         timer = timeLimit;
+    }
+
+    private void UpdateScoreText()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
+    }
+
+    private void TriggerFall()
+    {
+        // Imposta il piano come trigger, facendo "cadere" il giocatore
+        targetPlane.isTrigger = true;
+        isActive = false;
+
+        // Rende visibile l'oggetto
+        if (GameObject != null)
+        {
+            GameObject.SetActive(true); 
+        }
     }
 
     private void RestartLevel()
     {
-        // Riavvia il livello corrente
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
