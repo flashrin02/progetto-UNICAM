@@ -35,7 +35,6 @@ public class ObjectCollector : MonoBehaviour
         if (player == null) return;  
 
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        Debug.Log("🔍 Distanza giocatore-oggetto: " + distance);
 
         if (!collected && distance <= pickupDistance)
         {
@@ -54,13 +53,7 @@ public class ObjectCollector : MonoBehaviour
 
         if (collected)
         {
-            Debug.Log("📦 Oggetto raccolto. Aspettando il tasto E...");
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Debug.Log("✅ Tasto E premuto! Tentativo di caricare la scena...");
-                LoadNewScene();
-            }
+            LoadNewScene();
         }
     }
 
@@ -88,7 +81,14 @@ public class ObjectCollector : MonoBehaviour
 
     void LoadNewScene()
     {
-        Debug.Log("🚀 Caricamento scena: " + sceneName);
-        SceneManager.LoadScene(sceneName);
+        if (SceneManager.GetSceneByName(sceneName) != null)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+        else
+        {
+            Debug.LogError("⚠ ERRORE: La scena '" + sceneName + "' non esiste nei Build Settings!");
+        }
     }
+
 }

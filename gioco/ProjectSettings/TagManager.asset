@@ -9,6 +9,7 @@ TagManager:
   - checkpoint
   - Lava
   - Checkpoint
+  - Collectible
   layers:
   - Default
   - TransparentFX
