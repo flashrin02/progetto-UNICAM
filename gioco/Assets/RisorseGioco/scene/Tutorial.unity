@@ -252,8 +252,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.0037
-  m_Height: 0.0186
+  m_Radius: 0.0035
+  m_Height: 0.0185
   m_Direction: 1
   m_Center: {x: 0.0000468792, y: 0.009322589, z: 0.00034712278}
 --- !u!1 &149992243
@@ -1155,10 +1155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0448f82cfac7f3c4db6655005a39beba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
+  moveSpeed: 5
   goundDrag: 5
-  jumpForce: 7.5
-  jumpCooldown: 0.25
+  jumpForce: 6
+  jumpCooldown: 1.2
   airMultiplier: 0.2
   playerHeight: 0.1
   groundCheck: {fileID: 1285931856}
@@ -1624,7 +1624,7 @@ Transform:
   m_GameObject: {fileID: 1285931855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.25, z: 0}
+  m_LocalPosition: {x: 0, y: -1.169, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

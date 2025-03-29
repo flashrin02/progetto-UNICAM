@@ -25,8 +25,8 @@ public class AnimationStateController : MonoBehaviour
         bool isRunning = animator.GetBool("isRunning");
         bool movementInput = (Input.GetKey("w")  || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"));
         bool sprintingInput = Input.GetKey(KeyCode.LeftShift);
-        bool jumpingInput = Input.GetKeyDown(KeyCode.Space);
-        bool touchGround = true;
+        bool jumpingInput = Input.GetKey(KeyCode.Space);
+        bool touchGround = true;//Physics.CheckSphere(groundCheck.position, groundDistance, whatIsGround);
 
 
         //Controlla se sta camminando
@@ -53,25 +53,13 @@ public class AnimationStateController : MonoBehaviour
         if(jumpingInput && touchGround)
         {
             animator.SetBool("Jump", true);
-            /*animator.SetBool("Landed", false);
-            touchGround = false;*/
-            animator.SetInteger("JumpFase", 2);
-            
+            touchGround = false;
         }
         else
         {
             animator.SetBool("Jump", false);
-            animator.SetInteger("JumpFase", 0);
-            //touchGround = Physics.CheckSphere(groundCheck.position, groundDistance, whatIsGround);
         }
 
-        if(touchGround)
-        {
-            /*animator.SetBool("Jump", false);
-            animator.SetBool("Landed", true);*/
-            //animator.SetInteger("JumpFase", 0);
-            
-        }
             
 
         

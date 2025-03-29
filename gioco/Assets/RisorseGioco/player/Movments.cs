@@ -72,7 +72,8 @@ public class Movments : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && readyToJump && grounded)
         {
             readyToJump = false;
-            Jump();
+            //Jump();
+            Invoke("Jump", 0.2f);
             Invoke(nameof(ResetJump), jumpCooldown); //Se tieni premuto il pulsante di salto continua a saltare ad intervalli regolari
         }
     }
@@ -107,6 +108,7 @@ public class Movments : MonoBehaviour
         //Resetta la velocità verticale per il salto
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
 
+        
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
     private void ResetJump()
