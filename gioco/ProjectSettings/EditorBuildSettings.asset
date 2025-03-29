@@ -26,6 +26,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/RisorseGioco/scene/Spacetravel.unity
     guid: d45c05bd54fe1b040bcb3d6f361da142
+  - enabled: 1
+    path: Assets/RisorseGioco/scene/viaggioterra1.unity
+    guid: f4b1736f91434934aad74f2eaba3bc2d
+  - enabled: 1
+    path: Assets/RisorseGioco/scene/viaggioterra2.unity
+    guid: 09a220afc59e9104797c2dfd5f1e95ba
+  - enabled: 1
+    path: Assets/RisorseGioco/scene/Alaska.unity
+    guid: 238496d44f9311f47b4d166f76bfd476
+  - enabled: 1
+    path: Assets/RisorseGioco/scene/fine.unity
+    guid: 821655609ad818e4e8343df03f01c04b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
